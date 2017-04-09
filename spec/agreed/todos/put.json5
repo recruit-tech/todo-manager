@@ -1,0 +1,24 @@
+{
+  request: {
+    path: '/todos/:id',
+    method: 'PUT',
+    body: {
+      content: '{:content}'
+    },
+    values: {
+      id: 1,
+      content: 'buy 2 milks'
+    }
+  },
+  response: {
+    status: 201,
+    body: {
+      id: '{:id}',
+      content: '{:content}'
+    },
+    values: {
+      id: 1,
+    }
+  },
+}
+

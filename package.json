@@ -1,0 +1,27 @@
+{
+  "name": "todo-manager",
+  "version": "1.0.0",
+  "description": "todo management tool for recruit tech engineer training",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "express": "node app.js",
+    "mock": "agreed-server --path ./spec/agreed/entry.js --port 8080 --static ./public --static-prefix-path /public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/recruit-tech/todo-manager.git"
+  },
+  "author": "yosuke-furukawa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/recruit-tech/todo-manager/issues"
+  },
+  "homepage": "https://github.com/recruit-tech/todo-manager#readme",
+  "devDependencies": {
+    "agreed": "^0.5.0"
+  },
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}

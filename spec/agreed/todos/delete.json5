@@ -1,0 +1,14 @@
+{
+  request: {
+    path: '/todos/:id',
+    method: 'DELETE',
+    values: {
+      id: 1,
+    }
+  },
+  response: {
+    status: 204,
+  },
+}
+
+
