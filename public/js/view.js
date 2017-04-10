@@ -8,8 +8,8 @@
     li.setAttribute('id', `todo_${todo.id}`);
     const div = document.createElement('div');
     const element = `
-      <input type="checkbox" id="checkbox_${todo.id}" data-todo-id="${todo.id}" onclick="todo.controller.toggle(this)" />
-      <label for="checkbox_${todo.id}" class="checkbox-label" id="label_${todo.id}">${todo.content}</label>
+      <input type="checkbox" id="checkbox_${todo.id}" data-todo-id="${todo.id}" onclick="todo.controller.toggle(this)" ${todo.done && 'checked'} />
+      <label for="checkbox_${todo.id}" class="checkbox-label" id="label_${todo.id}" ${todo.done && 'style="text-decoration: line-through;"'}>${todo.content}</label>
       <input type="button" value="update" data-todo-id="${todo.id}" onclick="todo.controller.openPrompt(this)" />
       <input type="button" value="delete" data-todo-id="${todo.id}" onclick="todo.controller.openConfirm(this)" />
     `;

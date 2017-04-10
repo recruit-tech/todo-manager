@@ -20,9 +20,8 @@
   global.todo.controller.toggle = async (e) => {
     const id = e.getAttribute('data-todo-id');
     const label = document.getElementById(`label_${id}`);
-    const content = label.innerText;
     const done = e.checked;
-    const result = await global.todo.model.done(id, content, done);
+    const result = await global.todo.model.done(id, done);
     global.todo.view.toggleLabel(label, result.done);
   };
 

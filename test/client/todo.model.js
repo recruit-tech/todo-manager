@@ -1,6 +1,5 @@
 const assert = require('assert');
 const test = require('eater/runner').test;
-require('agreed-core/register');
 const agreedServer = require('agreed-server');
 const fetch = require('node-fetch');
 
