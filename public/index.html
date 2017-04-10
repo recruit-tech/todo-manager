@@ -3,36 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>Todo Manager</title>
-    <link rel="stylesheet" href="/css/reset.css" type="text/css">
-    <link rel="stylesheet" href="/css/todo.css" type="text/css">
+    <link rel="stylesheet" href="/css/reset.css" type="text/css" />
+    <link rel="stylesheet" href="/css/todo.css" type="text/css" />
   </head>
   <body>
     <section class="todo">
       <header>
         <h1>TODO Manager</h1>
-        <input type="text" class="new-todo" placeholder="write down todos">
-        <input type="button" class="new-todo-button" value="Create">
+        <form id="todo-form" >
+          <input type="text" class="new-todo" placeholder="write down todos">
+          <input type="submit" class="new-todo-button" value="Create">
+        </form>
       </header>
       <section class="todo-list">
-        <ul>
-          <li class="todo-view">
-            <div>
-              <input type="checkbox" id="checkbox_1">
-              <label for="checkbox_1" class="checkbox-label">test</label>
-              <input type="button" value="update">
-              <input type="button" value="delete">
-            </div>
-          </li>
-          <li class="todo-view">
-            <div>
-              <input type="checkbox" id="checkbox_2">
-              <label for="checkbox_2" class="checkbox-label">testtesatesaotjesioeajofijsdfoiaji</label>
-              <input type="button" value="update">
-              <input type="button" value="delete">
-            </div>
-          </li>
+        <ul id="todos">
         </ul>
       </section>
     </section>
+    <script src="/js/main.js" type="text/javascript"></script>
+    <script src="/js/controller.js" type="text/javascript"></script>
+    <script src="/js/model.js" type="text/javascript"></script>
+    <script src="/js/view.js" type="text/javascript"></script>
   </body>
 </html>

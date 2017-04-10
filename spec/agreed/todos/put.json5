@@ -3,22 +3,22 @@
     path: '/todos/:id',
     method: 'PUT',
     body: {
-      content: '{:content}'
+      content: '{:content}',
+      done: '{:done}',
     },
     values: {
       id: 1,
-      content: 'buy 2 milks'
+      content: 'buy 2 milks',
+      done: true,
     }
   },
   response: {
     status: 201,
     body: {
       id: '{:id}',
-      content: '{:content}'
+      content: '{:content}',
+      done: '{:done}'
     },
-    values: {
-      id: 1,
-    }
   },
 }
 

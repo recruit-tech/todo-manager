@@ -1,12 +1,13 @@
 {
   request: {
-    path: '/todos',
-    method: 'POST',
+    path: '/todos/:id',
+    method: 'PATCH',
     body: {
-      content: '{:content}'
+      done: '{:done}',
     },
     values: {
-      content: 'buy a milk'
+      id: 1,
+      done: true,
     }
   },
   response: {
@@ -14,11 +15,12 @@
     body: {
       id: '{:id}',
       content: '{:content}',
-      done: '{:done}',
+      done: '{:done}'
     },
     values: {
-      id: 1,
-      done: false,
-    }
+      content: 'buy 2 milks',
+    },
   },
 }
+
+

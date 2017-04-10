@@ -9,7 +9,8 @@
       todos: [
         {
           id: '{:todos.0.id}',
-          message: '{:todos.0.message}',
+          content: '{:todos.0.content}',
+          done: '{:todos.0.done}',
         },
         '{:todos.1-last}'
       ]
@@ -18,15 +19,18 @@
       todos: [
         {
           id: 1,
-          message: 'buy milk',
+          content: 'buy milk',
+          done: true,
         },
         {
           id: 2,
-          message: 'buy beer',
+          content: 'buy beer',
+          done: false,
         },
         {
           id: 3,
-          message: 'buy peanuts',
+          content: 'buy peanuts',
+          done: false,
         },
       ]
     }
