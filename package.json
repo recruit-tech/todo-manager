@@ -2,7 +2,7 @@
   "name": "todo-manager",
   "version": "1.0.0",
   "description": "todo management tool for recruit tech engineer training",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "agreed-server --path ./spec/agreed/entry.js --port 8080 --static ./public --static-prefix-path /public",
