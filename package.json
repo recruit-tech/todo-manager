@@ -4,10 +4,10 @@
   "description": "todo management tool for recruit tech engineer training",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "eater",
     "start": "agreed-server --path ./spec/agreed/entry.js --port 8080 --static ./public",
     "deploy": "now",
-    "alias": "now ln" 
+    "alias": "now ln"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,8 @@
   "homepage": "https://github.com/recruit-tech/todo-manager#readme",
   "devDependencies": {
     "agreed": "^0.5.0",
+    "eater": "^3.2.0",
+    "node-fetch": "^1.6.3",
     "now": "^4.11.0"
   },
   "dependencies": {

@@ -1,6 +1,7 @@
+'use strict';
 (function(global) {
 
-  const TODO_URL = '/todos';
+  const TODO_URL = global.TODO_URL || '/todos';
   const fetch = global.fetch;
 
   class TodoModel {
@@ -63,5 +64,5 @@
   };
 
   global.todo.model = new TodoModel();
-}(window || global));
+}(typeof global !== 'undefined' ? global : window));
 
