@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "agreed-server --path ./spec/agreed/entry.js --port 8080 --static ./public --static-prefix-path /public",
+    "start": "agreed-server --path ./spec/agreed/entry.js --port 8080 --static ./public",
     "deploy": "now",
     "alias": "now ln" 
   },
