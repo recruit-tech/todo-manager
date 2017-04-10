@@ -3,22 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>Todo Manager</title>
+    <link rel="stylesheet" href="/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="/css/todo.css" type="text/css">
   </head>
   <body>
     <section class="todo">
       <header>
         <h1>TODO Manager</h1>
-        <form method="POST" action="/todos">
-          <input type="text" >
-          <input type="submit" >
-        </form>
+        <input type="text" class="new-todo" placeholder="write down todos">
+        <input type="button" class="new-todo-button" value="Create">
       </header>
-      <section class="main">
+      <section class="todo-list">
         <ul>
-          <li><input type="checkbox">test</li>
-          <li><input type="checkbox">test</li>
-          <li><input type="checkbox">test</li>
-          <li><input type="checkbox">test</li>
+          <li class="todo-view">
+            <div>
+              <input type="checkbox" id="checkbox_1">
+              <label for="checkbox_1" class="checkbox-label">test</label>
+              <input type="button" value="update">
+              <input type="button" value="delete">
+            </div>
+          </li>
         </ul>
       </section>
     </section>
