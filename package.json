@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "agreed-server --path ./spec/agreed/entry.js --port 8080 --static ./public",
-    "api:list": "agreed-ui --path ./spec/agreed/entry.js --port 8000"
+    "api:list": "agreed-ui --path ./spec/agreed/entry.js --port 8000",
+    "deploy": "now",
+    "alias": "now ln" 
   },
   "repository": {
     "type": "git",
@@ -20,7 +22,7 @@
   "homepage": "https://github.com/recruit-tech/todo-manager#readme",
   "devDependencies": {
     "agreed": "^3.1.0",
-    "netlify-cli": "^1.2.2"
+    "now": "^11.0.5"
   },
   "dependencies": {
     "express": "^4.16.3"
