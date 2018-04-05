@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "agreed-server --path ./spec/agreed/entry.js --port 8080 --static ./public",
+    "api:list": "agreed-ui --path ./spec/agreed/entry.js --port 8000",
     "deploy": "now",
     "alias": "now ln" 
   },
@@ -20,10 +21,10 @@
   },
   "homepage": "https://github.com/recruit-tech/todo-manager#readme",
   "devDependencies": {
-    "agreed": "^0.5.0",
-    "now": "^4.11.0"
+    "agreed": "^3.1.0",
+    "now": "^11.0.5"
   },
   "dependencies": {
-    "express": "^4.15.2"
+    "express": "^4.16.3"
   }
 }
