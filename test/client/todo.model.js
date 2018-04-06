@@ -14,7 +14,7 @@ test('check todo create', () => {
   const server = agreedServer({
     path: './spec/agreed/entry.js',
     port,
-  });
+  }).createServer();
 
   server.on('listening', async () => {
     global.todo = {};
@@ -23,6 +23,7 @@ test('check todo create', () => {
     require('../../public/js/model');
     const result = await global.todo.model.create('hogehogehoge');
     const expect = require('../../spec/agreed/todos/post.json5').response.values;
+    expect.content = 'hogehogehoge';
     assert.deepEqual(result, expect);
     process.nextTick(() => {
       server.close();
@@ -35,7 +36,7 @@ test('check todo getTodos', () => {
   const server = agreedServer({
     path: './spec/agreed/entry.js',
     port,
-  });
+  }).createServer();
 
   server.on('listening', async () => {
     global.todo = {};
@@ -56,7 +57,7 @@ test('check todo done', () => {
   const server = agreedServer({
     path: './spec/agreed/entry.js',
     port,
-  });
+  }).createServer();
 
   server.on('listening', async () => {
     global.todo = {};
@@ -65,6 +66,8 @@ test('check todo done', () => {
     require('../../public/js/model');
     const result = await global.todo.model.done(1, true);
     const expect = require('../../spec/agreed/todos/done.json5').response.values;
+    expect.id = 1;
+    expect.done = true;
     assert.deepEqual(result, expect);
     process.nextTick(() => {
       server.close();
@@ -77,7 +80,7 @@ test('check todo update', () => {
   const server = agreedServer({
     path: './spec/agreed/entry.js',
     port,
-  });
+  }).createServer();
 
   server.on('listening', async () => {
     global.todo = {};
@@ -86,6 +89,8 @@ test('check todo update', () => {
     require('../../public/js/model');
     const result = await global.todo.model.updateContent(1, 'test');
     const expect = require('../../spec/agreed/todos/update.json5').response.values;
+    expect.id = 1;
+    expect.content = 'test';
     assert.deepEqual(result, expect);
     process.nextTick(() => {
       server.close();
@@ -98,7 +103,7 @@ test('check todo remove', () => {
   const server = agreedServer({
     path: './spec/agreed/entry.js',
     port,
-  });
+  }).createServer();
 
   server.on('listening', async () => {
     global.todo = {};
