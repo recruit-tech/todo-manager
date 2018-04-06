@@ -22,6 +22,7 @@
   "homepage": "https://github.com/recruit-tech/todo-manager#readme",
   "devDependencies": {
     "agreed": "^3.1.0",
+    "agreed-server": "^3.0.0",
     "eater": "^3.2.0",
     "node-fetch": "^1.6.3",
     "now": "^11.0.5"
